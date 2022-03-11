@@ -74,14 +74,14 @@ function InputBox() {
     <div className='bg-white p-2 rounded-2xl shadow-md text-gray-500 font-medium mt-6'>
       {/* top half */}
       <div className='flex space-x-4 p-4 items-center'>
-        <Image
+        {session?.user?.image && (<Image
           className=' rounded-full'
           src={session?.user?.image}
           width={40}
           height={40}
           layout='fixed'
           objectFit='cover'
-        />
+        />)}
         <form onSubmit={sendPost} className='flex flex-1'>
           <input
             ref={inputRef}
